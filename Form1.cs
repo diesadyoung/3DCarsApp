@@ -21,7 +21,7 @@ namespace _11111
         {
             guna2DataGridView1.Rows.Add(7);
 
-            guna2DataGridView1.Rows[0].Cells[0].Value = Image.FromFile("C:\\Users\\Nick Picasso\\source\\repos\\11111\\bin\\Debug\\Pics\\audi-a7.png");
+            guna2DataGridView1.Rows[0].Cells[0].Value = Image.FromFile("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\a7-front.png");
             guna2DataGridView1.Rows[1].Cells[0].Value = Image.FromFile("N:\\Downloads\\audi-e-tron.png");
              
             guna2DataGridView1.Rows[0].Cells[1].Value = "Audi A7 2020";
@@ -33,13 +33,14 @@ namespace _11111
         {
             if (cpt < guna2DataGridView1.Rows.Count)
             {
+                cpt++;
                 guna2PictureBox1.Image = (Image)guna2DataGridView1.Rows[cpt - 1].Cells[0].Value;
 
 
-                guna2PictureBox2.Load("C:\\Users\\Nick Picasso\\source\\repos\\11111\\bin\\Debug\\Pics\\" + cpt.ToString()+cpt.ToString() + ".png");
-                guna2PictureBox3.Load("C:\\Users\\Nick Picasso\\source\\repos\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
-                guna2PictureBox3.Image = guna2PictureBox1.Image;
-                cpt++;
+                guna2PictureBox2.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString()+cpt.ToString() + ".png");
+                guna2PictureBox3.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
+                guna2PictureBox4.Image = guna2PictureBox1.Image;
+                
             }
             else cpt = 1;
         }
@@ -48,13 +49,14 @@ namespace _11111
         {
             if (cpt > 1)
             {
+                cpt--;
                 guna2PictureBox1.Image = (Image)guna2DataGridView1.Rows[cpt - 1].Cells[0].Value;
 
 
-                guna2PictureBox2.Load("C:\\Users\\Nick Picasso\\source\\repos\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + ".png");
-                guna2PictureBox3.Load("C:\\Users\\Nick Picasso\\source\\repos\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
-                guna2PictureBox3.Image = guna2PictureBox1.Image;
-                cpt--;
+                guna2PictureBox2.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + ".png");
+                guna2PictureBox3.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
+                guna2PictureBox4.Image = guna2PictureBox1.Image;
+                
             }
             else cpt = 1;
         }
