@@ -17,16 +17,18 @@ namespace _11111
             InitializeComponent();
         }
         int cpt = 1;
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
+
             guna2DataGridView1.Rows.Add(7);
 
-            guna2DataGridView1.Rows[0].Cells[0].Value = Image.FromFile("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\a7-front.png");
-            guna2DataGridView1.Rows[1].Cells[0].Value = Image.FromFile("N:\\Downloads\\audi-e-tron.png");
-             
+            guna2DataGridView1.Rows[0].Cells[0].Value = Image.FromFile("..\\Debug\\Pics\\1.png");
+            guna2DataGridView1.Rows[1].Cells[0].Value = Image.FromFile("..\\Debug\\Pics\\2.png");
+
             guna2DataGridView1.Rows[0].Cells[1].Value = "Audi A7 2020";
             guna2DataGridView1.Rows[1].Cells[1].Value = "Audi E-Tron 2020";
-            // Add Photos
+            // Add Photos to datagrid
         }
 
         private void guna2CircleButton2_Click(object sender, EventArgs e)
@@ -35,12 +37,12 @@ namespace _11111
             {
                 cpt++;
                 guna2PictureBox1.Image = (Image)guna2DataGridView1.Rows[cpt - 1].Cells[0].Value;
+               
 
-
-                guna2PictureBox2.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString()+cpt.ToString() + ".png");
-                guna2PictureBox3.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
+                guna2PictureBox2.Load("..\\Debug\\Pics\\" + cpt.ToString()+cpt.ToString() + ".png");
+                guna2PictureBox3.Load("..\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
                 guna2PictureBox4.Image = guna2PictureBox1.Image;
-                
+                // Uploading next photo from lib
             }
             else cpt = 1;
         }
@@ -53,12 +55,13 @@ namespace _11111
                 guna2PictureBox1.Image = (Image)guna2DataGridView1.Rows[cpt - 1].Cells[0].Value;
 
 
-                guna2PictureBox2.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + ".png");
-                guna2PictureBox3.Load("N:\\Programming\\C#\\11111\\bin\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
+                guna2PictureBox2.Load("..\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + ".png");
+                guna2PictureBox3.Load("..\\Debug\\Pics\\" + cpt.ToString() + cpt.ToString() + cpt.ToString() + ".png");
                 guna2PictureBox4.Image = guna2PictureBox1.Image;
-                
+                // Uploading previusly photo from lib
             }
             else cpt = 1;
         }
+
     }
 }
