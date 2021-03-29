@@ -63,5 +63,19 @@ namespace _11111
             else cpt = 1;
         }
 
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox1.Image = guna2PictureBox2.Image;
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox1.Image = guna2PictureBox3.Image;
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+            guna2PictureBox1.Image = guna2PictureBox4.Image;
+        }
     }
 }
